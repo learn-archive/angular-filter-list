@@ -1,0 +1,47 @@
+<p>filter works!</p>
+<div class="container">
+  <div class="search">
+    <ng-container>
+      <label>Search: </label>
+      <input type="input" id="search" name="search" />
+      <br />
+    </ng-container>
+  </div>
+  <div class="color" style="margin-top: 20px">
+    <ng-container>
+      <input
+        type="checkbox"
+        id="red"
+        name="red"
+        value="red"
+        (click)="toggleColorState('red')"
+      />
+      <label for="red"> red</label><br />
+    </ng-container>
+    <ng-container>
+      <input
+        type="checkbox"
+        id="blue"
+        name="blue"
+        value="blue"
+        (click)="toggleColorState('blue')"
+      />
+      <label for="blue"> blue</label><br />
+    </ng-container>
+    <ng-container>
+      <input
+        type="checkbox"
+        id="green"
+        name="green"
+        value="green"
+        (click)="toggleColorState('green')"
+      />
+      <label for="green"> green</label><br />
+    </ng-container>
+  </div>
+  <ul class="elements" style="margin-top: 20px">
+    @for (item of filteredItems; track item) {
+    <li>{{ item.name }}</li>
+    }
+  </ul>
+</div>
